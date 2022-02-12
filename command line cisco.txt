@@ -1,0 +1,60 @@
+
+ports in router cisco
+port = console   # line con 0
+port = auxiliary # line aux 0
+virtual terminal # line vty 0 4
+
+ports ethrnet in router cisco
+port1 =fastethrnet 0/0
+port2 =fastethrnet 0/1
+
+indicates
+run = RAM
+start = NVRAM
+
+mode router cisco
+
+> limited user
+
+cl = enable # admin / privilege mode / mode exec 
+
+mode global config
+
+cl = configure terminal # 
+
+cl = hostname namerouter #chanage name router
+
+cl = exit # chanage mode
+
+cl = copy run start # save configuration in file [startup-config]
+
+cl = do copy run start # save configuration in file [startup-config] on same mode router
+
+cl = write # save configuration in file [startup-config] on mode exec
+
+cl = enable password yourpass # chanage password router
+
+cl = logout # log off the user on mode execc
+
+cl =  do command line # execute any command line on globle configuation
+
+cl = no command line # delete any command line
+
+cl = show ruuing-config
+
+cl = show start # for show file [startup-config] from NVRAM
+
+cl = show flash # for show total files from Flash
+ 
+cl = enable secret yourpass # encrypion password
+
+cl = line con 0 / password yourpass / login or logout # create password for port consle
+
+cl = interface fastethrnet / ip address any ip any mask # give port ethrnet ip address
+
+cl = 
+
+
+
+
+
